@@ -1,0 +1,32 @@
+#Notes
+
+markdown, is a language similar  to HTML, it is used to describe the structure of a document.
+The advantage is its syntax is shorter.
+
+prompt, the text before the cursor on a terminal
+
+## Terminal Commands
+
+pwd = Print Working Directory
+cd = Change Directory
+whoami = Who am I? What is my username?
+
+element = component / represented by brackets "stacks" - everything inside an open and close tag is an element.
+
+*Repertoire = the set of numeric representations of . "basically a folder"
+*Glyph -> It is the visual representation of character
+*ASCII = 0 to 255; 0 or 1 -> groups of 8 -> bytes
+*UNICODE = every characters has a unicode. Changes for each character regardless of capitalization.
+
+// utf-8 is the most common charset
+
+## Git
+
+VCS = Versioning Conrol System
+
+* Snapshot -> Commits
+* Your name, your email, the date, message, identifier (hash)
+* Repository -> folder, your code + git information (history of your code)
+
+Github = "social media" for code. A platform for sharing code.
+
