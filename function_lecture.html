@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use script";
+
+    function goToCodeup(amISick) {
+
+        if(amISick == true){
+            console.log("I'm way too sick. I am not going.");
+            return false;
+        }
+
+        console.log("Wake up!");
+        console.log("Have breakfast");
+        console.log("Take shower");
+        console.log("Commute");
+        return true;
+    }
+
+   // Monday
+    var didIMakeIt = goToCodeup();
+    console.log("Did I make it? " + didIMakeIt);
+
+    //Tuesday
+    console.log("Did I make it? " + goToCodeup(true)); // when calling a function you send the values not the variable names
+
+    // Wednesday
+    console.log("Did I make it? " + goToCodeup(1));
+
+</script>
+</body>
+</html>

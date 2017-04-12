@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    "use strict";
+    var stopAt = 25;
+    var counter = 0;
+    var round = 1;
+    while (counter < stopAt) {
+        console.log("Counter " + counter + " Rounds " + " " + round);
+        counter += 5;
+        round++;
+    }
+    console.log("While loop ended");
+
+    var links= "";
+    var counter = 0;
+
+    // The do while executes at least once.
+
+    do{
+        links += "<a href='page_" + (counter+1) + ".html'> target='_break' class='links'></a><br>";
+        counter++;
+
+    }while(counter == 50);
+    console.log(links);
+</script>
+</body>
+</html>

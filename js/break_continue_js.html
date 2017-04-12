@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+<script>
+
+    "use strict";
+
+    while (true) {
+        var random = Math.floor((Math.random() * 50) + 1);
+
+        console.log(random);
+        if (random % 2 !== 0) {
+            console.log("I stopped at " + random);
+            break;
+        }
+    }
+
+    random = Math.floor((Math.random() * 50) + 1);
+    console.log("Random odd number to skip is: " + random);
+    for (var i = 0; i < 50; i++) {
+        if (i % 2 == 0) {
+            continue;
+        } else {
+            if (i == random) {
+                console.log("Yikes! Skipping number: " + i);
+            } else {
+                console.log("Here is an odd number. " + i);
+            }
+
+        }
+    }
+
+//    var y = 0;
+//    while (true) {
+//        if (y === 10){
+//            console.log("End of loop.")
+//            break;
+//        }
+//        ++y;
+//        console.log(y)
+//    }
+//
+//    // web example
+//
+//    var y = 0;
+//    var password = "123";
+//
+//    while(true) {
+//        console.log("Please enter a valid password: ");
+//        if (password === "123"){
+//            break;
+//        }
+//    }
+//console.log("Access granted.");
+//
+//    // game example
+//
+//var gameRunning = true;
+//var lives = 3;
+//
+//while (gameRunning) {
+//    // play game
+//    if (lives === 0) {
+//        console.log("Game Over");
+//        break;
+//    }
+//}
+//
+//     continue;
+//
+//    var y = 0;
+//    while (true) {
+//        y++
+//        if (y=== 100) {
+//            console.log("End of the loop!")
+//            break;
+//        }
+//        if (y % 5 === 0) {
+//            continue;
+//        }
+//        console.log(y)
+//    }
+
+</script>
+</body>
+</html>

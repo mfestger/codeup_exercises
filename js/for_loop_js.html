@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+<script>
+    "use strict";
+
+    console.log("*** EXAMPLE 1 ***");
+    var x = Math.floor(Math.random()* 10 + 1);
+
+    for (var i = 1; i < 10; i++) {
+        var product = (i * x);
+        console.log(x + " x " + i + " = " + product);
+    }
+
+    console.log("*** EXAMPLE 2 ***");
+    for (var y = 1; y <= 10; ++y) {
+        var z = Math.floor(Math.random() * (200 - 20 + 1) + 20);
+        z % 2 ? console.log(z + " is odd.") : console.log(z + " is even.")
+
+        // if (z % 2) {
+        // } else{
+        // console.log(z + " is even");
+        // }
+    }
+
+    console.log("*** EXAMPLE 3 ***");
+    for (var n = 100; n >= 5; n -= 5){
+        console.log(n)
+    }
+
+
+
+
+</script>
+</body>
+</html>

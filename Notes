@@ -30,3 +30,20 @@ VCS = Versioning Conrol System
 
 Github = "social media" for code. A platform for sharing code.
 
+git init initializes a git repository
+git status Outputs the current state of your repository
+putting a . infront of a file indicates it is hidden
+putting an -A infront of a directory indicates we want the entirety of the folder
+git commit -m "Add notes and hello world with HTML." -> this tells you what was changed
+git add <file name> Start tracking this file with Git.
+git log
+
+* Remote -> A remote git repository.
+// in order to do this, you need to tell Github where your code is
+
+git remote add origin <url that github has given you
+git push origin master>
+
+If there is an * infront of something when you are pulling, it will ignore all file types with that extension.
+
+
