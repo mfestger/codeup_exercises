@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays Further Examples</title>
+</head>
+<body>
+<script>
+    var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var mealsArray = ["Food1", "Food2", "Food3", "Food4", "Food5", "Food6", "Food7", "Food8", "Food9", "Food10", "Food11", "Food12" ];
+
+    days.forEach(function(day) {
+        random = Math.floor(Math.random() * 12 + 1);
+        console.log(day + mealsArray[random]);
+    });
+
+
+</script>
+</body>
+</html>

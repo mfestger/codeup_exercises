@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays Manipulation</title>
+</head>
+<body>
+
+
+<script>
+    "use strict";
+
+    (function () {
+
+        var fruits = [];
+
+        fruits.push("Banana"); //how to add elements in array
+        fruits.push("Apple");
+        fruits.push("Kiwi");
+        fruits.push("Coconut");
+        fruits.unshift("Watermelon");
+
+        // fruits[1] = "Yikes!"
+
+        fruits.forEach(function (el, i) {
+            console.log(el + " index " + i);
+        })
+        //deleting the last element
+        fruits.pop();
+        //deleting the first element
+        fruits.shift()
+        var looking = fruits.indexOf("Apple");
+        console.log(looking);
+
+    })();
+
+
+
+</script>
+</body>
+</html>

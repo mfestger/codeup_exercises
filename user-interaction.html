@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>user-interaction</title>
+    <link href="js/user-interaction.js">
+</head>
+<body>
+<script>
+    'use strict';
+
+//    function registerYesorNo(){
+//         var register = confirm("If you are registered, click OK.")
+//        if (register){
+//            prompt("Please enter your username");
+//        } else {
+//            alert("Please register.")
+//            registerYesorNo()
+//        }
+//    }
+//
+//    registerYesorNo();
+
+
+
+
+
+
+
+// pizza exercise
+    function namePrompt() {
+        var nameResponse = prompt("Please enter your name.");
+        if (nameResponse) {
+            alert("Welcome, " + nameResponse + "!");
+        }else{
+            namePrompt();
+        }
+    }
+function pizzaPrompt() { // use switch / case elements to choose toppings!!!!!! CUSTOM RESPONSES DUUUHHH
+    var pizzaResponse = prompt("Do you like pizza?");
+    if (pizzaResponse) {
+        alert("Me too!")
+    } else {
+        pizzaPrompt();
+    }
+}
+
+    namePrompt();
+    pizzaPrompt();
+
+</script>
+</body>
+</html>

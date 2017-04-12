@@ -7,20 +7,27 @@
 <body>
 
 <script>
-var friendsNames = ['girv','lani','veroni','david'];
-console.log(friendsNames.length);
 
-for(var i = 0; i < 3; i++){
-    console.log(friendsNames[0]);
-    console.log(friendsNames[1]);
-    console.log(friendsNames[2]);
-    console.log(friendsNames[3]);
-    break;
+    console.log("*** TODO 1 ***");
+var friendsNames = ['girv','lani','ruiz','david'];
 
+    console.log("*** TODO 2 ***");
+    console.log(friendsNames.length);
+
+    console.log("*** TODO 3 ***");
+    for(var i = 0; i < friendsNames.length; ++i){
+    console.log(friendsNames[i]);
 }
 
+    console.log("*** Additional Examples 1 ***");
+    for(i = 0; i <= 3; ++i){
+        console.log(friendsNames[i]);
+    }
 
-
+    console.log("*** Additional Examples 2 ***");
+    friendsNames.forEach(function(){
+        console.log(friendsNames);
+    });
 
 </script>
 </body>
