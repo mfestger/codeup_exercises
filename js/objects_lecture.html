@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    var pizzas = [
+            {
+                price: 9.99,
+                isDelivery: true,
+                toppings: ['pepperoni', 'bacon', 'ham', 'onions']
+            }, {
+            price: 8.99,
+            isDelivery: true,
+            toppings: ['pepperoni', 'bacon']
+            }, {
+            price: 7.99,
+            isDelivery: false,
+            toppings: ['ham', 'pineapple']
+            }, {
+            price: 6.99,
+            isDelivery: false,
+            toppings: [' green peppers', 'onions']
+            }, {
+            price: 13.99,
+            isDelivery: true,
+            toppings: ['banana peppers', 'bacon', 'ham', 'onions']
+            }
+    ];
+
+    // display pizzas for delivery
+
+    pizzas.forEach(function(pizza){
+        if (! pizza.isDelivery){
+            return;
+        }
+        console.log("------------------");
+        console.log("Price is: " + pizza.price);
+        console.log("Topppings are: " + pizza.toppings.join(" "));
+    });
+
+
+
+
+//    var pizza = {
+//      price: 9.99,
+//        isDelivery: true,
+//      toppings: ['pepperoni', 'green peppers', "mushrooms", "olives"]
+//        getPrice: function() {
+//            if (pizza.isDelivery) {
+//            return this.price
+//            }
+//            }
+//        }
+//
+//    };
+//
+//
+//
+//
+//
+//    {
+//       if (pizza.isDelivery){
+//           return pizza.price + 4.99;
+//       }
+//       return pizza.price;
+//    }
+//
+//
+//    console.log("The price of the pizza is : " pizza.price);
+
+</script>
+</body>
+</html>
