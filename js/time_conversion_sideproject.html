@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Converting Time</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    // establish arrays
+    var twentyFourHour = [
+        "12:00am", // 0
+        "1:00am",
+        "2:00am",
+        "3:00am",
+        "4:00am",
+        "5:00am",
+        "6:00am",
+        "7:00am",
+        "8:00am",
+        "9:00am",
+        "10:00am",
+        "11:00am",
+        "12:00pm",
+        "1:00pm", // 13
+        "2:00pm",
+        "3:00pm", // 15
+        "4:00pm",
+        "5:00pm",
+        "6:00pm",
+        "7:00pm",
+        "8:00pm", // 20
+        "9:00pm",
+        "10:00pm",
+        "11:00pm"
+        ];
+
+    var twelveHour = [
+        "24:00",
+        "01:00",
+        "02:00",
+        "03:00",
+        "04:00",
+        "05:00",
+        "06:00",
+        "07:00",
+        "08:00",
+        "09:00",
+        "10:00",
+        "11:00",
+        "12:00",
+        "13:00",
+        "14:00",
+        "15:00",
+        "16:00",
+        "17:00",
+        "18:00",
+        "19:00",
+        "20:00",
+        "21:00",
+        "22:00",
+        "23:00"
+
+    ];
+
+    // now write a function that converts one array element to another
+    // i need to generate a random number, and say "if array1[x], say "array1[x] = "array2[x]"
+
+
+function timeConverter() {
+    var random1 = Math.floor(Math.random() * 23) + 1;
+    var random2 = Math.floor(Math.random() * 23) + 1;
+    console.log("Here is normal time converted to military time.");
+    console.log(twentyFourHour[random1] + " => "  + twelveHour[random1]);
+    console.log("Here i military time converted to normal time.");
+    console.log(twelveHour[random2] + " => " + twentyFourHour[random2]);
+}
+
+// now call the function
+    timeConverter();
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
