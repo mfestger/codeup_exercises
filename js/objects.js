@@ -1,11 +1,12 @@
 "use strict";
+
 // EXAMPLE 1
 var person = {};
-console.log(typeof person);
 person.firstName = "Mike";
 person.lastName = "Festger";
 console.log("Hello from " + person.firstName + " " + person.lastName + "!");
 console.log("----------------------");
+
 // EXAMPLE 2
 var shoppers = [
     {name: 'Cameron', amount: 180},
@@ -13,20 +14,24 @@ var shoppers = [
     {name: 'George', amount: 320}
 ];
 shoppers.forEach(function (shopper) {
-    if (shopper.amount >= 200) {
+        var discountRate = .35;
+        var totalDollarsPaid = 0;
+        var discountBreakpointDollars = 200;
+    if (shopper.amount >= discountBreakpointDollars){
+        var totalDiscount = (shopper.amount * discountRate);
+        totalDollarsPaid = (shopper.amount - totalDiscount);
         console.log("Name: " + shopper.name + ".");
         console.log("Amount paid before discount: $" + shopper.amount);
         console.log("Amount of discount (if applicable): 35%.");
-        var discountedAmount = shopper.amount * .35;
-        console.log("Amount after discount applied: $" + discountedAmount + ".");
+        console.log("Amount after discount applied: $" + totalDollarsPaid + ".");
         console.log("--------------------");
     } else {
         console.log(shopper.name + " did not spend more than $200 so there was no discount.");
         console.log("--------------------")
     }
 });
-// EXAMPLE 3
 
+// EXAMPLE 3
 var books = [
     {title: "The World According to Garp", author: {firstName: "John", lastName: "Irving"}},
     {title: "Cat in the Hat", author: {firstName: "Dr.", lastName: "Suess"}},
