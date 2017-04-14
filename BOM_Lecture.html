@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM Lecture</title>
+</head>
+<body>
+<script>
+    "use strict";
+
+    // create interval to say howdy ten times
+
+    var interval = 200;
+    var i = 0;
+    var intervalId = setInterval(function () {
+        if(i === 10){
+            clearInterval(intervalId);
+        }
+        console.log("Howdy!");
+    }, interval);
+    console.log(intervalId);
+
+    // make a pop up after 3 seconds
+
+    var x;
+    var wait = 3000;
+    var timeoutId = setTimeout(function () {
+        alert("You WON $1,000,000!!!!");
+        var x = 23;
+    }, wait);
+
+    console.log(x);
+
+     // location objects
+    // redirect
+
+   //  window.location = "https://www.google.com";
+    location.reload();
+    location.reload(true); // this will completely refresh the page, regardless of cache
+
+
+</script>
+</body>
+</html>

@@ -9,13 +9,6 @@
 
 <script>
     "use strict";
-    console.log(" Type either:");
-    console.log("callPet");
-    console.log("playWithPet");
-    console.log("feedPet");
-    console.log("makePetSleep");
-    console.log("cleanPet");
-    console.log("artemis");
 
     var pepper = {
         name: "Pepper",
@@ -30,22 +23,34 @@
         soap: 3
     };
 
+    console.log(pepper);
+    console.log(" Type either:");
+    console.log("callPet");
+    console.log("playWithPet");
+    console.log("feedPet");
+    console.log("makePetSleep");
+    console.log("cleanPet");
+    console.log("makePetSpeak")
+    console.log("artemisVisit");
+
+
     function callPet() {
         alert("DADDY PLAY WITH ME ::pants::");
+        return pepper;
     }
     function playWithPet() {
         pepper.happy = true;
         pepper.hungry = true;
         pepper.clean = false;
         console.log("That was so much fun!!!");
-        console.log(pepper);
+        return pepper;
     }
     function feedPet(petFood) {
         pepper.hungry = false;
         pepper.sleepy = true;
         pepper.petFood = pepper.petFood - 1;
         console.log("That was yummy but I prefer it when mommy gives me human food...");
-        console.log(pepper);
+        return pepper;
     }
     function makePetSleep() {
         pepper.sleepy = false;
@@ -53,37 +58,42 @@
         pepper.hungry = true;
         pepper.age = pepper.age + 1;
         console.log("Both sides of the bed are mine!");
-        console.log(pepper);
+        return pepper;
     }
     function cleanPet(soap) {
         pepper.happy = false;
         pepper.clean = true;
         pepper.soap = pepper.soap - 1;
         console.log("I love baths!!! I just don't like soap...");
-        console.log(pepper);
+        return pepper;
     }
-    function artemis() {
+    function makePetSpeak(){
+        alert("RUFF!");
+        return pepper;
+    }
+    function artemisVisit() {
         var artemis = prompt("Can Artemis come over??");
-        while (artemis === "") {
-            artemis = prompt("..? Well... can he...?");
+        if (artemis === null) {
+            alert("..? Well... can he...?");
+            artemisVisit();
         }
         artemis = artemis.toLowerCase();
-        if (artemis.indexOf("yes") != -1) {
+        if (artemis === "") {
+            alert("..? Well... can he...?");
+            artemisVisit();
+        } else if (artemis.indexOf("yes") != -1) {
             alert("OOOMMMGGG BITE ALL THE EARS!!!");
             pepper.happy = true;
             pepper.clean = false;
+            return pepper;
 
         } else if (artemis.indexOf("no") != -1) {
-            alert("*whimpers*")
-        }
-        else {
-            alert("Huh? Well... can he???");
+            alert("*whimpers*");
             pepper.happy = false;
+            return pepper;
         }
-        console.log(pepper);
+
     }
-
-
 
 </script>
 </body>
