@@ -8,31 +8,6 @@
 
 
 <script>
-//    Create a pet object with the following...
-//
-//        Properties:
-//
-//    1) name - string
-//    2) species - string
-//    3) age - number
-//    4) gender - string
-//    5) clean - boolean
-//    6) hungry - boolean
-//    7) sleepy - boolean
-//    8 ) happy - boolean
-//    9) petFood - number 10
-//    10) soap - number 3
-//
-//    Methods:
-//
-//        1) callPet() - call’s out pet name
-//    2) playWithPet() - makes pet happy and hungry and dirty
-//    3) feedPet(petFood) - makes pet not hungry and sleepy and reduces petFood by 1
-//    4) makePetSleep() - makes pet not sleepy, not happy, and hungry, and 1 older
-//    5) cleanPet(soap) - makes pet not happy and clean and reduces soap by 1
-//
-//    Have fun with the pet!
-//        call it, feed it, play with it, make it sleep, clean it
     "use strict";
 
     var pepper = {
@@ -43,50 +18,65 @@
         clean: false,
         hungry: true,
         sleepy: false,
-        happy: 100,
+        happy: true,
         petFood: 10,
         soap: 3
-    }
+    };
 
     function callPet() {
-    alert("DADDY PLAY WITH ME ::pants::")
+        alert("DADDY PLAY WITH ME ::pants::");
     }
     function playWithPet() {
-
         pepper.happy = true;
         pepper.hungry = true;
-        pepper.dirty = true;
-
+        pepper.clean = false;
+        console.log("That was so much fun!!!");
+        console.log(pepper);
     }
-    function feedPet(petFood){
+    function feedPet(petFood) {
         pepper.hungry = false;
         pepper.sleepy = true;
         pepper.petFood = pepper.petFood - 1;
+        console.log("That was yummy but I prefer it when mommy gives me human food...");
+        console.log(pepper);
     }
-    function makePetSleep(){
+    function makePetSleep() {
         pepper.sleepy = false;
         pepper.happy = false;
         pepper.hungry = true;
         pepper.age = pepper.age + 1;
+        console.log("Both sides of the bed are mine!");
+        console.log(pepper);
     }
-    function cleanPet(soap){
+    function cleanPet(soap) {
         pepper.happy = false;
         pepper.clean = true;
         pepper.soap = pepper.soap - 1;
+        console.log("I love baths!!! I just don't like soap...");
+        console.log(pepper);
+    }
+    function artemis() {
+        var artemis = prompt("Can Artemis come over??");
+        while (artemis === "") {
+            artemis = prompt("..? Well... can he...?");
+        }
+        artemis = artemis.toLowerCase();
+        if (artemis.indexOf("yes") != -1) {
+            alert("OOOMMMGGG BITE ALL THE EARS!!!");
+            pepper.happy = true;
+            pepper.clean = false;
+
+        } else if (artemis.indexOf("no") != -1) {
+            alert("*whimpers*")
+        }
+        else {
+            alert("Huh? Well... can he???");
+            pepper.happy = false;
+        }
+        console.log(pepper);
     }
 
-    function artemis(){
 
-       var forReal =  prompt("IS HE COMING OVER FOR REAL?!?");
-        if (forReal = "yes"){
-            alert("OOOOMMMMMMMGGGGGGG BITE ALL THE EARS!!!!");
-        }
-
-        function kissFace(){
-            pepper.happy = pepper.happy + 100000;
-
-        }
-    }
 
 </script>
 </body>
