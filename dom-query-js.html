@@ -24,49 +24,55 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
-
+<p>
+    <button id = "button_one">Button 1</button>
+    <button id = "button_two">Button 2</button>
+    <button id = "button_three">Button 3</button>
+    <button id = "button_four">Button 4</button>
+</p>
 <script>
-    (function() {
+//    (function() {
         "use strict";
-        // TODO: Uncomment next line and get the main header element by id
-         var mainHeader = document.getElementById("main-header");
-         console.log(mainHeader);
 
-        // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "JavaScript is Cool";
-        console.log(mainHeader);
+var button_one = function(){
+    var mainHeader = document.getElementById("main-header");
+    mainHeader.innerHTML = "JavaScript is Cool";
 
-        // TODO: Uncomment the next line and get the sub header element by id
-         var subHeader = document.getElementById("sub-header");
-         console.log(subHeader);
+};
 
-        // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = '#0000FF';
+var button_two = function(){
+    var subHeader = document.getElementById("sub-header");
+    subHeader.style.color = '#0000FF';
 
-        // TODO: Uncomment the next line and get all list items
-         var listItems = document.getElementsByTagName("li");
-         console.log(listItems);
+};
 
-        // TODO: Set text color on every other list item to grey
-        for(var i = 0; i < listItems.length; i += 2){
-            listItems[i].style.color = "grey";
+var button_three = function(){
+    var listItems = document.getElementsByTagName("li");
+    for(var i = 0; i < listItems.length; i += 2){
+        listItems[i].style.color = "red";
+    }
+    for(var i = 0; i < listItems.length; i++){
+        if (listItems[i].getAttribute("data-dbid") === "1"){
+            listItems[i].style.color = "blue";
         }
+    }
+};
 
-        // TODO: Set text color of li with dbid = 1 to blue
-        for(var i = 0; i < listItems.length; i++){
-            if (listItems[i].getAttribute("data-dbid") === "1"){
-                listItems[i].style.color = "blue";
-            }
-        }
+var button_four = function(){
+    var subParagraphs = document.getElementsByClassName("sub-paragraph");;
+    subParagraphs[0].innerHTML = "Mission Accomplished!";
+};
 
-        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-         var subParagraphs = document.getElementsByClassName("sub-paragraph");;
-         console.log(subParagraphs);
+document.getElementById('button_one').addEventListener("click", button_one, false);
+document.getElementById('button_two').addEventListener("click" ,button_two, false);
+document.getElementById('button_three').addEventListener("click", button_three, false);
+document.getElementById('button_four').addEventListener("click", button_four, false);
+
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerHTML = "Mission Accomplished!";
 
-    })();
+
+//    })();
 </script>
 </body>
 </html>
