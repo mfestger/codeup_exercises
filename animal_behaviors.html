@@ -45,7 +45,7 @@
         console.log("That was so much fun!!!");
         return pepper;
     }
-    function feedPet(petFood) {
+    function feedPet() {
         pepper.hungry = false;
         pepper.sleepy = true;
         pepper.petFood = pepper.petFood - 1;
@@ -71,8 +71,8 @@
         alert("RUFF!");
         return pepper;
     }
-    function artemisVisit() {
-        var artemis = prompt("Can Artemis come over??");
+    function artemisVisit(artemis) {
+        artemis = prompt("Can Artemis come over??");
         if (artemis === null) {
             alert("..? Well... can he...?");
             artemisVisit();
