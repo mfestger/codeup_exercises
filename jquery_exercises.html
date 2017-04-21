@@ -8,7 +8,7 @@
 
 <h1 id="maintitle">Title Goes Here</h1>
 <div id="colorbar"></div>
-<p>
+<p id="para">
     Here is some content that was written. Enjoy the filler content here. Not finished yet?
     No problem - here is more content! OK, I'm out of content now. Thanks for reading.
 </p>
@@ -24,5 +24,23 @@
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
         crossorigin="anonymous"></script>
+
+<script>
+    $('#maintitle').click(function() {
+        $(this).css('background-color', 'yellow');
+    });
+
+    $('#para').dblclick(function(e) {
+        $('#para').css('font-size', '18px');
+    });
+    $('.lineitems').hover(
+        function() {
+            $(this).css('color', 'red');
+        },
+        function() {
+            $(this).css('color', 'black');
+        }
+    );
+</script>
 </body>
 </html>
