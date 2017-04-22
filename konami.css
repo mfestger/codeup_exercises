@@ -1,0 +1,220 @@
+
+
+
+
+
+#master-controller {
+    width: 630px;
+    height: 250px;
+    background-color: darkgrey;
+    margin: auto;
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}
+
+.controller-container {
+    width: 600px;
+    height: 190px;
+    background-color: #29292a;
+    position: absolute;
+    border: solid gray 4px;
+    margin: 2% 1%;
+
+}
+#dpad {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+}
+#dpad div {
+    position: absolute;
+    background: black;
+}
+
+#dpad-left {
+    border-left: solid gray 4px;
+    border-top: solid gray 4px;
+    border-bottom: solid gray 4px;
+    width: 20%;
+    height: 20%;
+    top: 50%;
+    left: 25%
+}
+#dpad-bottom {
+    border-left: solid gray 4px;
+    border-right: solid gray 4px;
+    border-bottom: solid gray 4px;
+    width: 20%;
+    height: 20%;
+    top: 75%;
+    left: 45%
+}
+#dpad-top {
+    border-left: solid gray 4px;
+    border-right: solid gray 4px;
+    border-top: solid gray 4px;
+    width: 20%;
+    height: 20%;
+    top: 29%;
+    left: 45%
+}
+#dpad-right {
+    border-right: solid gray 4px;
+    border-top: solid gray 4px;
+    border-bottom: solid gray 4px;
+    width: 20%;
+    height: 20%;
+    top: 50%;
+    left: 68%
+}
+#dpad-center {
+    background-color: black;
+    width: 20%;
+    height: 24%;
+    top: 51%;
+    left: 48%
+}
+
+.center-container {
+    position: absolute;
+    width: 210px;
+    height: 190px;
+    left: 30%;
+    bottom: .1%;
+    
+}
+
+#grey-stripe1 {
+    width: 100%;
+    height: 15%;
+    border-radius: 0 0 5px 5px;
+    background-color: darkgrey;
+}
+
+#grey-stripe2 {
+    width: 100%;
+    height: 15%;
+    border-radius: 5px;
+    background-color: darkgrey;
+    margin-top: 3%;
+}
+#grey-stripe3 {
+    width: 100%;
+    height: 11%;
+    border-radius: 5px;
+    background-color: darkgrey;
+    margin-top: 3%;
+    color: red;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 8px;
+}
+#grey-stripe4 {
+    width: 100%;
+    height: 23%;
+    border-radius: 5px;
+    background-color: lightgrey;
+    margin-top: 3%;
+    display: block;
+
+}
+
+#select-button{
+    position: absolute;
+    height: 10%;
+    width: 30%;
+    border-radius: 5px;
+    background-color: black;
+    top: 61%;
+    margin-left: 25px;
+
+
+}
+
+#start-button{
+    position: absolute;
+    height: 10%;
+    width: 30%;
+    border-radius: 5px;
+    background-color: black;
+    left: 60%;
+    top: 61%;
+    display: inline;
+    min-width: 10px;
+
+}
+
+#grey-stripe5 {
+    width: 100%;
+    height: 18.8%;
+    border-radius: 5px;
+    background-color: darkgrey;
+    margin-top: 3%;
+}
+
+#right-container {
+    height: 100%;
+    width: 33%;
+    float: right;
+}
+
+
+#button-B {
+    position: relative;
+    width: 65px;
+    height: 65px;
+    background-color: lightgrey;
+    float: right;
+    top: 105px;
+    right: 20px;
+    color: red;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#circle-B {
+    position: relative;
+    width: 55px;
+    height: 55px;
+    background-color: red;
+    border-radius: 100%;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+#button-A {
+    position: relative;
+    width: 65px;
+    height: 65px;
+    background-color: lightgrey;
+    float: right;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    top: 105px;
+    right: 20px;
+    font-family: 'Press Start 2P', cursive;
+    color: red;
+
+
+
+}
+.btnLabel{
+    position: relative;
+    top: 8px;
+    left: 52px
+}
+#circle-A {
+    position: relative;
+    width: 55px;
+    height: 55px;
+    background-color: red;
+    border-radius: 100%;
+    margin-top: 5px;
+    margin-left: 5px;
+
+
+
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konami Code</title>
+    <link rel="stylesheet" href="konami.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+<body>
+<h1>Konami Code</h1>
+<div id="master-controller">
+    <div class="controller-container">
+        <div id="dpad">
+            <div id="dpad-left"></div>
+            <div id="dpad-bottom"></div>
+            <div id="dpad-top"></div>
+            <div id="dpad-right"></div>
+            <div id="dpad-center"></div>
+        </div>
+        <div class="center-container">
+            <div id="grey-stripe1"></div>
+            <div id="grey-stripe2"></div>
+            <div id="grey-stripe3">SELECT START</div>
+            <div id="grey-stripe4">
+                <div id="select-button"></div>
+                <div id="start-button"></div>
+            </div>
+            <div id="grey-stripe5"></div>
+        </div>
+        <div id="right-container">
+            <div id="button-B">
+                <div id="circle-B"></div>
+                <span class="btnLabel">B</span>
+            </div>
+            <div id="button-A">
+                <div id="circle-A"></div>
+                <span class="btnLabel">A</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+<script>
+
+    "use strict";
+
+    var validKeys = {
+        38: 'up',
+        40: 'down',
+        37: 'left',
+        39: 'right',
+        66: 'b',
+        65: 'a'
+    };
+
+    var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
+    var konamiCodePosition = 0;
+
+    document.addEventListener('keydown', function(e) {
+        var key = validKeys[e.keyCode];
+        switch (e.keyCode) {
+            case 37:
+                $('#dpad-left').css('background-color', 'white');
+                setTimeout(function(){ $('#dpad-left').css('background-color', 'black'); }, 100);
+                break;
+            case 38:
+                $('#dpad-top').css('background-color', 'white');
+                setTimeout(function(){ $('#dpad-top').css('background-color', 'black'); }, 100);
+                break;
+            case 40:
+                $('#dpad-bottom').css('background-color', 'white');
+                setTimeout(function(){ $('#dpad-bottom').css('background-color', 'black'); }, 100);
+                break;
+            case 39:
+                $('#dpad-right').css('background-color', 'white');
+                setTimeout(function(){ $('#dpad-right').css('background-color', 'black'); }, 100);
+                break;
+            case 66:
+                $('#circle-B').css('background-color', 'white');
+                setTimeout(function(){ $('#circle-B').css('background-color', 'red'); }, 100);
+                break;
+            case 65:
+                $('#circle-A').css('background-color', 'white');
+                setTimeout(function(){ $('#circle-A').css('background-color', 'red'); }, 100);
+                break;
+        }
+        var requiredKey = konamiCode[konamiCodePosition];
+        if (key == requiredKey){
+            konamiCodePosition++;
+            if (konamiCodePosition == konamiCode.length)
+                activateCheats();
+
+        } else
+            konamiCodePosition = 0;
+        console.log(e.keyCode);
+    });
+    function activateCheats() {
+        alert("gitgud");
+    }
+
+// call data attributes instead
+
+
+</script>
+</body>
+</html>
