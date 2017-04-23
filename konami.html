@@ -40,7 +40,12 @@
     </div>
 </div>
 
+<div id="contra-screen">
+    <img  src="https://giffiles.alphacoders.com/149/1492.gif" height=" 760px" width="1300px">
+</div>
+<audio id="konami-sound" src="audio/jungle.mp3">
 
+</audio>
 <script
         src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
@@ -49,6 +54,7 @@
 
     "use strict";
 
+    document.getElementById("contra-screen").style.visibility='hidden';
     var validKeys = {
         38: 'up',
         40: 'down',
@@ -100,10 +106,14 @@
         console.log(e.keyCode);
     });
     function activateCheats() {
-        alert("gitgud");
+        $('#master-controller').hide();
+        $('h1').hide();
+        document.getElementById("contra-screen").style.visibility="visible";
+        document.getElementById("konami-sound").play();
+
+
     }
 
-// call data attributes instead
 
 
 </script>
