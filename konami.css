@@ -1,6 +1,7 @@
 
 body {
     background-color: black;
+
 }
 
 #master-controller {
@@ -24,13 +25,14 @@ h1 {
     position: absolute;
     border: solid gray 4px;
     margin: 2% 1%;
-
 }
+
 #dpad {
     position: absolute;
     width: 150px;
     height: 150px;
 }
+
 #dpad div {
     position: absolute;
     background: black;
@@ -45,6 +47,7 @@ h1 {
     top: 50%;
     left: 25%
 }
+
 #dpad-bottom {
     border-left: solid gray 4px;
     border-right: solid gray 4px;
@@ -54,6 +57,7 @@ h1 {
     top: 75%;
     left: 45%
 }
+
 #dpad-top {
     border-left: solid gray 4px;
     border-right: solid gray 4px;
@@ -63,6 +67,7 @@ h1 {
     top: 29%;
     left: 45%
 }
+
 #dpad-right {
     border-right: solid gray 4px;
     border-top: solid gray 4px;
@@ -72,6 +77,7 @@ h1 {
     top: 50%;
     left: 68%
 }
+
 #dpad-center {
     background-color: black;
     width: 20.1%;
@@ -86,7 +92,6 @@ h1 {
     height: 190px;
     left: 30%;
     bottom: .1%;
-    
 }
 
 #grey-stripe1 {
@@ -115,6 +120,7 @@ h1 {
     vertical-align: middle;
     padding-top: 8px;
 }
+
 #grey-stripe4 {
     width: 100%;
     height: 23%;
@@ -122,7 +128,6 @@ h1 {
     background-color: lightgrey;
     margin-top: 3%;
     display: block;
-
 }
 
 #select-button{
@@ -133,8 +138,6 @@ h1 {
     background-color: black;
     top: 61%;
     margin-left: 25px;
-
-
 }
 
 #start-button{
@@ -147,7 +150,6 @@ h1 {
     top: 61%;
     display: inline;
     min-width: 10px;
-
 }
 
 #grey-stripe5 {
@@ -156,6 +158,7 @@ h1 {
     border-radius: 5px;
     background-color: darkgrey;
     margin-top: 3%;
+
 }
 
 #right-container {
@@ -201,11 +204,13 @@ h1 {
     color: red;
 
 }
+
 .btnLabel{
     position: relative;
     top: 8px;
     left: 52px
 }
+
 #circle-A {
     position: relative;
     width: 55px;
@@ -217,6 +222,12 @@ h1 {
 }
 
 #contra-screen {
+    height: 100%;
+    width: 100%;
+    background-image: url("https://media.giphy.com/media/OCg6Mr31t9pAY/giphy.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: fixed;
 }
 
