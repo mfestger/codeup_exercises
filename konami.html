@@ -39,21 +39,16 @@
         </div>
     </div>
 </div>
-
-<img id="contra-screen" src="https://media.giphy.com/media/OCg6Mr31t9pAY/giphy.gif"></div>
-
+<img id="contra-screen" src="https://media.giphy.com/media/OCg6Mr31t9pAY/giphy.gif">
 <audio id="konami-sound" src="audio/jungle.mp3"></audio>
-
 <script
         src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+</script>
 <script>
-
     "use strict";
-
     document.getElementById("contra-screen").style.visibility='hidden';
-
     var validKeys = {
         38: 'up',
         40: 'down',
@@ -62,10 +57,8 @@
         66: 'b',
         65: 'a'
     };
-
     var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
     var konamiCodePosition = 0;
-
     document.addEventListener('keydown', function(e) {
         var key = validKeys[e.keyCode];
         switch (e.keyCode) {
@@ -99,7 +92,6 @@
             konamiCodePosition++;
             if (konamiCodePosition == konamiCode.length)
                 activateCheats();
-
         } else
             konamiCodePosition = 0;
         console.log(e.keyCode);
@@ -110,8 +102,6 @@
         document.getElementById("contra-screen").style.visibility = "visible";
         document.getElementById("konami-sound").play();
     }
-
-
 </script>
 </body>
 </html>
