@@ -2,28 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Top 10 Facts About National Parks</title>
+    <title>Awesome Facts About National Parks</title>
     <style>
         body{
             font-family: 'Montserrat', sans-serif;
+            background-color: #094020;
+            color: white;
+        }
+        h1{
+            text-align: center;
+        }
+        #title-map{
+            height: 50%;
+            width: 50%;
         }
         .invisible {
             display: none;
         }
 
         .highlight {
-            background-color: gold;
+            background-color: yellow;
+            color: forestgreen;
         }
         .title-bait{
             text-decoration: underline;
+            font-weight: bold;
         }
+        .bolden {
+            font-weight: bold;
+        }
+        .blue {
+            color: blue;
+        }
+        footer{
+            font-family: Arial;
+            text-align: right;
+            font-size: 12px;
+        }
+        
     </style>
+
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 </head>
 <body>
-<h1> Top 10 Facts About National Parks</h1>
-<button id="toggle-button">Show / Hide Text</button>
+<h1>National Parks of the United States</h1>
+<a href="https://www.nps.gov/index.htm">
+<center><img id="title-map" src="http://www.mapsofworld.com/usa/national-parks/maps/usa-national-park-map.jpg"></center>
+</a>
+<h2>Fun Facts About National Parks</h2>
+<button id="toggle-button">Hide</button>
 <dl>
     <dt class = "title-bait">Fun Fact #1</dt>
     <dd class="line-item">As you may know, the National Park Service sets aside land for all of us to enjoy in its natural state. How much, you ask? 51 million acres! About the size of Kansas.</dd>
@@ -56,6 +84,37 @@
     <dd class="line-item">The Yellowstone Caldera, in Yellowstone National Park, is a super volcano that is responsible for three of the world’s six biggest volcano eruptions. It is on pace to blow about 100,000 years from now. So come see it while you still can!</dd>
 </dl>
 
+<button id="toggle-button2">Add Highlight</button>
+
+<ul> <h3 class = canyon-title>The Grand Canyon</h3>
+    <li class="park-facts1">It is not the deepest canyon in the world, despite popular belief.</li>
+    <li class="park-facts1">There are no Dinosaur bones in the Grand Canyon.</li>
+    <li class="park-facts1">It has it's own weather!</li>
+    <li class="park-facts1">There is a town that resides inside the canyon.</li>
+</ul>
+
+<button id="toggle-button3">Add Highlight</button>
+
+<ul> <h3 class = "pinnacles-title"> Pinnacles National Park</h3>
+    <li class="park-facts2">The park is known for it's caves and beautiful terrain.</li>
+    <li class="park-facts2">It is divided into two areas that have no connecting path.</li>
+    <li class="park-facts2">The park was not considered significant enough to be a National Park when the National Park Service was founded.</li>
+    <li class="park-facts2">It is located in California.</li>
+</ul>
+
+<button id="toggle-button4">Add Highlight</button>
+
+<ul> <h3 class = "zion-title"> Zion National Park</h3>
+    <li class="park-facts3">It is located in Utah.</li>
+    <li class="park-facts3">Zion National Park includes mountains, canyons, buttes, mesas, monoliths, rivers, slot canyons, and natural arches.</li>
+    <li class="park-facts3">Numerous plant species as well as 289 species of birds, 75 mammals (including 19 species of bat), and 32 reptiles inhabit the park.</li>
+    <li class="park-facts3">The geology of the Zion and Kolob canyons area includes nine formations that together represent 150 million years of mostly Mesozoic-aged sedimentation.</li>
+</ul>
+
+<footer>
+    A page by Mike Festger
+</footer>
+
 
 <script>
         src="https://code.jquery.com/jquery-2.2.4.min.js"
@@ -69,7 +128,14 @@
     // This hides the line-items class
     $(document).ready(function() {
         $('#toggle-button').click(function() {
-            $('.line-item').toggleClass('invisible');
+            $('.line-item').toggleClass("invisible");
+            if(!$('.line-item').hasClass("invisible")){
+                $(this).text("Hide");
+                console.log("Hide");
+            }else{
+                $(this).text("Show");
+                console.log("Show")
+            }
         });
     });
 
@@ -79,6 +145,96 @@
             $(this).toggleClass('highlight');
         });
     });
+
+    // THis highlights the facts under the national park name. ::Grand Canyon::
+
+    $(document).ready(function () {
+        $('#toggle-button2').click(function () {
+         $('.park-facts1').toggleClass('highlight');
+            if(!$('.park-facts1').hasClass("highlight")){
+                $(this).text("Add Highlight");
+            }else{
+                $(this).text("Remove Highlight");
+            }
+        })
+    });
+
+    // This makes it so the facts turn bold when h3 is clicked. ::Grand Canyon::
+
+    $(document).ready(function () {
+        $('.canyon-title').click(function () {
+            $('.park-facts1').toggleClass('bolden');
+        })
+    });
+
+    // This makes the parent li blue when a li is clicked. ::Grand Canyon::
+
+    $(document).ready(function () {
+        $('.park-facts1').click(function () {
+            $('.canyon-title').toggleClass('blue');
+        })
+    });
+
+
+    // THis highlights the facts under the national park name. ::Pinnacles::
+
+    $(document).ready(function () {
+        $('#toggle-button3').click(function () {
+            $('.park-facts2').toggleClass('highlight');
+            if(!$('.park-facts2').hasClass("highlight")){
+                $(this).text("Add Highlight");
+            }else{
+                $(this).text("Remove Highlight");
+            }
+        })
+    });
+
+    // This makes it so the facts turn bold when h3 is clicked. ::Pinnacles::
+
+    $(document).ready(function () {
+        $('.pinnacles-title').click(function () {
+            $('.park-facts2').toggleClass('bolden');
+        })
+    });
+
+    // This makes the parent li blue when a li is clicked. ::Pinnacles::
+
+    $(document).ready(function () {
+        $('.park-facts2').click(function () {
+            $('.pinnacles-title').toggleClass('blue');
+        })
+    });
+
+    // THis highlights the facts under the national park name. ::Zion::
+
+    $(document).ready(function () {
+        $('#toggle-button4').click(function () {
+            $('.park-facts3').toggleClass('highlight');
+            if(!$('.park-facts3').hasClass("highlight")){
+                $(this).text("Add Highlight");
+            }else{
+                $(this).text("Remove Highlight");
+            }
+        })
+    });
+
+    // This makes it so the facts turn bold when h3 is clicked. ::Zion::
+
+    $(document).ready(function () {
+        $('.zion-title').click(function () {
+            $('.park-facts3').toggleClass('bolden');
+        })
+    });
+
+    // This makes the parent li blue when a li is clicked. ::Zion::
+
+    $(document).ready(function () {
+        $('.park-facts3').click(function () {
+            $('.zion-title').toggleClass('blue');
+        })
+    });
+
+
 
 
 
