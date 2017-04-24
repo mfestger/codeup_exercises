@@ -8,13 +8,19 @@
             font-family: 'Montserrat', sans-serif;
             background-color: #094020;
             color: white;
+
         }
         h1{
             text-align: center;
         }
+        #top-bar{
+            background-color: yellow;
+            color: #094020;
+        }
         #title-map{
             height: 50%;
             width: 50%;
+            border:solid yellow 10px;
         }
         .invisible {
             display: none;
@@ -32,7 +38,7 @@
             font-weight: bold;
         }
         .blue {
-            color: blue;
+            color: yellow;
         }
         footer{
             font-family: Arial;
@@ -46,7 +52,7 @@
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 </head>
 <body>
-<h1>National Parks of the United States</h1>
+<div id = "top-bar"><h1>National Parks of the United States</h1></div>
 <a href="https://www.nps.gov/index.htm">
 <center><img id="title-map" src="http://www.mapsofworld.com/usa/national-parks/maps/usa-national-park-map.jpg"></center>
 </a>
