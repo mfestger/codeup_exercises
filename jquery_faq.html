@@ -8,14 +8,17 @@
             font-family: 'Montserrat', sans-serif;
             background-color: #094020;
             color: white;
-
         }
-        h1{
+        h1, h2{
             text-align: center;
         }
-        #top-bar{
+        .top-bar{
             background-color: yellow;
             color: #094020;
+        }
+        #x {
+            color: red;
+            float: right;
         }
         #title-map{
             height: 50%;
@@ -25,7 +28,6 @@
         .invisible {
             display: none;
         }
-
         .highlight {
             background-color: yellow;
             color: forestgreen;
@@ -50,16 +52,33 @@
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
 </head>
 <body>
-<div id = "top-bar"><h1>National Parks of the United States</h1></div>
+<div class="top-bar"><h1>National Parks of the United States</h1></div>
+<span id="x">x</span>
+<div id="newsletter"><h1 id="clickMeForPrompt">Would you like to sign up for our newsletter?</h1>
+</div>
 <a href="https://www.nps.gov/index.htm">
-<center><img id="title-map" src="http://www.mapsofworld.com/usa/national-parks/maps/usa-national-park-map.jpg"></center>
+    <center><img id="title-map"
+                 src="http://cdn0.wideopencountry.com/wp-content/uploads/2016/08/us-national-parks-optimal-road-trip-1.png">
+    </center>
 </a>
-<h2>Fun Facts About National Parks</h2>
+
+
+<!--<div id=registerPrompt" class="alert alert-info" role="alert">Click here to register for our site!</div>-->
+
+
+
+
+
+<h2 id="registerPrompt">Click here to register for our site!</h2>
+<h2 class=top-bar>Fun Facts About National Parks</h2>
 <button id="toggle-button">Hide</button>
 <dl>
-    <dt class = "title-bait">Fun Fact #1</dt>
+    <dt class="title-bait">Fun Fact #1</dt>
     <dd class="line-item">As you may know, the National Park Service sets aside land for all of us to enjoy in its natural state. How much, you ask? 51 million acres! About the size of Kansas.</dd>
 
     <dt class="title-bait">Fun Fact #2</dt>
@@ -131,6 +150,17 @@
 <script>
     "use strict";
 
+//this hides the park facts when the page loads
+    $('.park-facts1').hide();
+    $('.park-facts2').hide();
+    $('.park-facts3').hide();
+    $('#registerPrompt').hide();
+
+    //this makes the registerPrompt element fade in after 8 seconds
+
+
+    $('#registerPrompt').fadeIn(8000);
+
     // This hides the line-items class
     $(document).ready(function() {
         $('#toggle-button').click(function() {
@@ -170,6 +200,7 @@
     $(document).ready(function () {
         $('.canyon-title').click(function () {
             $('.park-facts1').toggleClass('bolden');
+            $('.park-facts1').slideDown();
         })
     });
 
@@ -200,6 +231,7 @@
     $(document).ready(function () {
         $('.pinnacles-title').click(function () {
             $('.park-facts2').toggleClass('bolden');
+            $('.park-facts2').slideDown();
         })
     });
 
@@ -229,6 +261,7 @@
     $(document).ready(function () {
         $('.zion-title').click(function () {
             $('.park-facts3').toggleClass('bolden');
+            $('.park-facts3').slideDown();
         })
     });
 
@@ -240,7 +273,24 @@
         })
     });
 
+$(document).ready(function () {
+    $('#x').click(function () {
+        $('#newsletter').hide();
+        $('#x').hide();
 
+
+    })
+})
+    $(document).ready(function () {
+        $('#clickMeForPrompt').click(function () {
+            prompt("Please enter your email:")
+        })
+    })
+    $(document).ready(function () {
+        $('#registerPrompt').click(function () {
+            prompt("Please enter your email:")
+        })
+    })
 
 
 
