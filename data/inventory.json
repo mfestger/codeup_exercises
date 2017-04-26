@@ -1,0 +1,86 @@
+[
+    {
+        "title": "Hammer",
+        "quantity": 25,
+        "categories": [
+            "tool"
+        ],
+        "price": "$20"
+    }, {
+        "title": "Drill",
+        "quantity": 5,
+        "categories": [
+            "tool",
+            "powered"
+        ],
+        "price": "$100"
+    }, {
+        "title": "Mower",
+        "quantity": 5,
+        "categories": [
+            "tool",
+            "gas",
+            "outdoor"
+        ],
+        "price": "$200"
+    }, {
+        "title": "Screwdrivers",
+        "quantity": 25,
+        "categories": [
+            "tool"
+        ],
+        "price": "$10"
+    },
+    {
+        "title": "Wrench",
+        "quantity": 10,
+        "categories": [
+            "tool"
+        ],
+        "price": "$2,000"
+    },
+    {
+        "title": "Hand Saw",
+        "quantity": 15,
+        "categories": [
+            "tool"
+        ],
+        "price": "$200"
+    },
+    {
+        "title": "Garden Hose",
+        "quantity": 30,
+        "categories": [
+            "tool",
+            "outdoor"
+        ],
+        "price": "$35"
+    },
+    {
+        "title": "Rake",
+        "quantity": 25,
+        "categories": [
+            "tool",
+            "outdoor"
+        ],
+        "price": "$25"
+    },
+    {
+        "title": "Weed-whacker",
+        "quantity": 3,
+        "categories": [
+            "tool",
+            "gas",
+            "outdoor"
+        ],
+        "price": "$70"
+    },
+    {
+        "title": "Measuring Tape",
+        "quantity": 35,
+        "categories": [
+            "tool"
+        ],
+        "price": "$5"
+    }
+]
