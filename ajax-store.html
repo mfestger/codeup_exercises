@@ -29,11 +29,12 @@
     </nav>
 </head>
 <body>
-
-
+<div id="tim-allen"></div>
 <h1>It's Tool Time!</h1>
 <h2>Shop</h2>
-
+<form>
+    <input class="refresh-button" type="button" onClick="history.go(0)" value="Refresh">
+</form>
 <table id="products">
     <thead>
         <tr>
@@ -53,21 +54,11 @@
 <script>
 (function() {
     "use strict";
-    // TODO: Create an ajax GET request for /data/inventory.json
-//    $.ajax("data/inventory.json").done(function(data) {
-//        console.log(data);})
 
-
-    // TODO: Take the data from inventory.json and append it to the products table
-    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
-    //             its contents and fields
-    //       HINT: You will want to target #insertProducts for your new HTML elements
-$('h1').click(function () {
+$('#tim-allen').click(function () {
     var audio = new Audio('audio/tim-allen.wav');
     audio.play();
-
 });
-
     $.ajax({
         url: "data/inventory.json",
         type: "GET"
@@ -83,8 +74,6 @@ $('h1').click(function () {
             console.log(data[0].categories);
             $('#insertProducts').append(htmlStr);
         }
-
-
     });
 })();
 </script>

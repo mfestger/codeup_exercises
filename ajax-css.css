@@ -10,25 +10,45 @@ h1 {
     margin-left: 10%;
     font-family: 'Black Ops One', cursive;
     color: #1d3555;
+    font-size: 50px;
 }
 
 h2 {
-    margin-left: 12%;
-    margin-top: 5%;
+    margin-left: 19%;
+    margin-top: 1%;
     font-family: 'Black Ops One', cursive;
     color: #1d3555;
 }
 
 #products {
     margin-left: 4%;
+    margin-top: 1%;
+    background-color: #1d3555;
+    color: white;
+    border-radius: 20px;
+    opacity: 0.5;
 }
 
 .refresh-button {
+    margin-top: 1%;
     margin-left: 4%;
+    font-family: 'Black Ops One', cursive;
 }
 
 td {
     padding: 5%;
+}
+th {
+    text-align: center;
+    font-family: 'Black Ops One', cursive;
+    font-size: 20px;
+}
+
+#tim-allen {
+    width: 170px;
+    height: 160px;
+    float: right;
+    margin-right: 35%;
 }
 
 
