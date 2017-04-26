@@ -1,0 +1,59 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Special Elite', cursive;
+    font-size: 24px;
+    text-align: center;
+}
+
+#intro-text-container {
+    margin-top: 20%;
+
+  
+}
+
+.intro-text {
+    color: white;
+    font-family: 'Special Elite', cursive;
+    font-size: 24px;
+    overflow: visible;
+   
+}
+
+#intro-prompt {
+    top: 40%;
+    position: absolute;
+    float: left;
+    left: 40%;
+}
+
+#choose-wisely-instruction {
+    color: brown;
+    font-family: 'Ceviche One', cursive;
+    
+    font-size: 60px;
+
+}
+
+#fork-image{
+    top: 10%;
+    left:17%;
+    position: absolute;
+    overflow: visible;
+    border-radius: 12%;
+}
+
+#left {
+    height: 15%;
+    width: 15%;
+    float: left;
+    overflow: visible;
+}
+
+#right {
+
+    height: 15%;
+    width: 15%;
+    float: right;
+    overflow: visible;
+}

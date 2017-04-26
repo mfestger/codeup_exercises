@@ -1,0 +1,140 @@
+<!--arros dont show after full intro-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ceviche+One" rel="stylesheet">
+    <link rel="stylesheet" href="doors.css">
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+</head>
+<body>
+
+<div id="intro-prompt">Skip intro?
+    <button id="show-intro-yes" class = "intro-button-group">Yes</button>
+    <button id="show-intro-no" class = "intro-button-group">No</button>
+</div>
+
+
+<div id="choose-wisely-instruction">Choose Your Path</div>
+<img id = "fork-image" src="img/fork.jpg">
+
+<div id = 'intro-text-container'>
+    <div id = "text01" class = "intro-text">
+        You have come far, traveller. For that, I congratulate you...
+    </div>
+    <div id = "text02" class = "intro-text">
+        ...but your journey is far from over. Danger lurks around every corner.
+    </div>
+    <div id = "text03" class = "intro-text">
+        A menacing creature waits for you at the end of your travels. And here you stand - at a fork in the road...
+    </div>
+    <div id = "text04" class = "intro-text">
+        Choose wisely! For if you select the wrong path, you will walk right into the creatures den...!
+    </div>
+</div>
+
+<img id="left" class="final-button" src="img/codeup-logo-left.jpg"> </img>
+<img id="right" class="final-button" src="img/codeup-logo-right.jpg"> </img>
+
+
+
+
+
+<script>
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"
+</script>
+
+<script>
+    $(document).ready(function() {
+
+        // This hides all the intro text and other elements upon loading the page
+        $('#text01').hide();
+        $('#text02').hide();
+        $('#text03').hide();
+        $('#text04').hide();
+        $('#fork-image').hide();
+        $('#choose-wisely-instruction').hide();
+        $('#left').hide();
+        $('#right').hide();
+
+
+
+        //if the user chooses NOT to skip the intro
+        $('#show-intro-no').click(function () {
+
+            // This gets ride of the Show Intro? prompt
+            $('#show-intro-yes').hide();
+            $('#show-intro-no').hide();
+            $('#intro-prompt').hide();
+
+
+             // This plays the background music
+            var audio = new Audio('audio/creepy-forest.mp3');
+            audio.play();
+
+            // this will fade text in and out
+            $('#text01').fadeIn(2000).fadeOut(2100);
+
+            // This delays the next text from fading in until the one before it finishes
+            $('#text02').delay(4000).fadeIn(6000).fadeOut(2100);
+
+            // This delays the next text from fading in until the one before it finishes
+            $('#text03').delay(13100).fadeIn(6000).fadeOut(2100);
+
+            // This delays the next text from fading in until the one before it finishes
+            $('#text04').delay(21000).fadeIn(6000).fadeOut(2100);
+
+            $('#fork-image').delay(34000).fadeIn(4000);
+            $('#choose-wisely-instruction').delay(34100).fadeIn(4000);
+
+        });
+        // in the event that the user wants to skip intro (the syntax needs to be fixed from show to skip!)
+        $('#show-intro-yes').click(function () {
+
+            $('#show-intro-yes').hide();
+            $('#show-intro-no').hide();
+            $('#intro-prompt').hide();
+
+            $('#fork-image').delay(900).fadeIn(4000);
+            $('#choose-wisely-instruction').delay(900).fadeIn(4000);
+            $('.final-button').delay(900).fadeIn(6000);
+
+             //This plays the background music
+            var audio = new Audio('audio/creepy-forest.mp3');
+            audio.play();
+        });
+
+        $('.final-button').click(function () {
+            var fate = Math.floor(Math.random() * 2 +1);
+            console.log(fate);
+            if (fate <= 1) {
+                death();
+            }
+            else {
+                freedom();
+            }
+            function death() {
+                alert("You died");
+            }
+            function freedom() {
+                alert("FREEEDOOOOOOOM!!!!!");
+            }
+
+        });
+
+
+    });
+
+
+
+
+
+
+</script>
+</body>
+</html>
