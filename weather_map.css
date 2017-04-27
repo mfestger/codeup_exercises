@@ -1,30 +1,26 @@
 body{
     background-color: #428bca;
 }
-
 #main-header{
     color: #428bca;
     background-color: white;
     text-align: center;
     font-weight: bold;
     font-size: 55px;
-    font-family: Arial;
+    font-family: 'Raleway', sans-serif;
 }
-
-#cityName {
+#cityName{
     margin-top: 50px;
     margin-left: 30px;
     color:white;
     /*text-align: center;*/
     font-weight: bold;
     font-size: 45px;
-    font-family: Arial;
+    font-family: 'Raleway', sans-serif;
 }
-
 #master-container{
     /*display: inline;*/
 }
-
 .data-containers {
     float: left;
     height: 250px;
@@ -35,23 +31,34 @@ body{
     text-align: center;
     color: #000;
 }
-
-#container-left {
+#container-left{
     margin-left: 100px;
 }
-#container-center {
+#container-center{
     margin-left: 100px;
 }
-#container-right {
+#container-right{
     margin-left: 100px;
 }
-
 .temperature{
     font-size: 30px;
     font-weight: bold;
 }
-
 .weather{
     font-size: 18px;
-    margin-top: 75px;
+    margin-top: 24px;
+}
+#latlng, submit{
+    margin-left: 3%;
+    margin-top: 2%;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+#map{
+    margin-left: 3%;
+    margin-top: 2%;
+    width: 1200px;
+    height: 500px;
+    margin-bottom: 120px;
 }
