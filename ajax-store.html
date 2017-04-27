@@ -52,30 +52,30 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <script>
-(function() {
-    "use strict";
+    (function () {
+        "use strict";
 
-$('#tim-allen').click(function () {
-    var audio = new Audio('audio/tim-allen.wav');
-    audio.play();
-});
-    $.ajax({
-        url: "data/inventory.json",
-        type: "GET"
-    }).done(function(data) {
+        $('#tim-allen').click(function () {
+            var audio = new Audio('audio/tim-allen.wav');
+            audio.play();
+        });
+        $.ajax({
+            url: "data/inventory.json",
+            type: "GET"
+        }).done(function (data) {
 
-        for(var i = 0; i < data.length; i++){
-            var htmlStr = "<tr><td>";
-            console.log(data);
-            htmlStr += data[i].title + "</td><td>";
-            htmlStr += data[i].quantity + "</td><td>";
-            htmlStr += data[i].price + "</td><td>";
-            htmlStr += data[i].categories + "</td></tr>";
-            console.log(data[0].categories);
-            $('#insertProducts').append(htmlStr);
-        }
-    });
-})();
+            for (var i = 0; i < data.length; i++) {
+                var htmlStr = "<tr><td>";
+                console.log(data);
+                htmlStr += data[i].title + "</td><td>";
+                htmlStr += data[i].quantity + "</td><td>";
+                htmlStr += data[i].price + "</td><td>";
+                htmlStr += data[i].categories + "</td></tr>";
+                console.log(data[0].categories);
+                $('#insertProducts').append(htmlStr);
+            }
+        });
+    })();
 </script>
 
 </body>
