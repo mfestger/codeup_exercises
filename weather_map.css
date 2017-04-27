@@ -1,0 +1,57 @@
+body{
+    background-color: #428bca;
+}
+
+#main-header{
+    color: #428bca;
+    background-color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 55px;
+    font-family: Arial;
+}
+
+#cityName {
+    margin-top: 50px;
+    margin-left: 30px;
+    color:white;
+    /*text-align: center;*/
+    font-weight: bold;
+    font-size: 45px;
+    font-family: Arial;
+}
+
+#master-container{
+    /*display: inline;*/
+}
+
+.data-containers {
+    float: left;
+    height: 250px;
+    width: 300px;
+    background-color: #cdddeb;
+    border-radius: 20px;
+    border: solid gray 4px;
+    text-align: center;
+    color: #000;
+}
+
+#container-left {
+    margin-left: 100px;
+}
+#container-center {
+    margin-left: 100px;
+}
+#container-right {
+    margin-left: 100px;
+}
+
+.temperature{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.weather{
+    font-size: 18px;
+    margin-top: 75px;
+}
