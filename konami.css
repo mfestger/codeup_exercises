@@ -1,6 +1,7 @@
 
 body {
     background-color: black;
+    font-family: 'Press Start 2P', cursive;
 
 }
 
@@ -229,5 +230,12 @@ h1 {
     background-repeat: no-repeat;
     background-size: cover;
     position: fixed;
+}
+
+#super-text{
+    color: white;
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
 }
 
