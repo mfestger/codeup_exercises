@@ -1,4 +1,3 @@
-<!--arros dont show after full intro-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Ceviche+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet">
     <link rel="stylesheet" href="doors.css">
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 </head>
@@ -17,10 +16,12 @@
     <button id="show-intro-no" class = "intro-button-group">No</button>
 </div>
 
-
 <div id="choose-wisely-instruction">Choose Your Path</div>
+<div id = "left-button" class="final-button"></div>
+<div id = "right-button" class="final-button"></div>
+<img id = "ghostLeft" src="img/Ghost.jpg" alt = "Ghost!!!">
+<img id = "ghostRight" src="img/Ghost.jpg" alt = "Ghost!!!">
 <img id = "fork-image" src="img/fork.jpg">
-
 <div id = 'intro-text-container'>
     <div id = "text01" class = "intro-text">
         You have come far, traveller. For that, I congratulate you...
@@ -36,8 +37,7 @@
     </div>
 </div>
 
-<img id="left" class="final-button" src="img/codeup-logo-left.jpg"> </img>
-<img id="right" class="final-button" src="img/codeup-logo-right.jpg"> </img>
+
 
 
 
@@ -59,8 +59,11 @@
         $('#text04').hide();
         $('#fork-image').hide();
         $('#choose-wisely-instruction').hide();
-        $('#left').hide();
-        $('#right').hide();
+        $('#ghostLeft').hide();
+        $('#ghostRight').hide();
+        $('.final-button').hide();
+
+
 
 
 
@@ -81,17 +84,17 @@
             $('#text01').fadeIn(3100).fadeOut(2100);
 
             // This delays the next text from fading in until the one before it finishes
-            $('#text02').delay(4390).fadeIn(6000).fadeOut(2100);
+            $('#text02').delay(5000).fadeIn(3100).fadeOut(2100);
 
             // This delays the next text from fading in until the one before it finishes
-            $('#text03').delay(13100).fadeIn(6000).fadeOut(2100);
+            $('#text03').delay(10100).fadeIn(3100).fadeOut(2100);
 
             // This delays the next text from fading in until the one before it finishes
-            $('#text04').delay(21000).fadeIn(6000).fadeOut(2100);
+            $('#text04').delay(15000).fadeIn(3100).fadeOut(2100);
 
-            $('#fork-image').delay(34000).fadeIn(4000);
-            $('#choose-wisely-instruction').delay(34100).fadeIn(4000);
-            $('.final-button').delay(35200).fadeIn(6000);
+            $('#fork-image').delay(22000).fadeIn(4000);
+            $('#choose-wisely-instruction').delay(20100).fadeIn(4000);
+            $('.final-button').delay(22200).fadeIn(6000);
 
         });
         // in the event that the user wants to skip intro (the syntax needs to be fixed from show to skip!)
@@ -110,24 +113,52 @@
             audio.play();
         });
 
-        $('.final-button').click(function () {
-            var fate = Math.floor(Math.random() * 2 +1);
-            console.log(fate);
-            if (fate <= 1) {
-                death();
+//        $('.final-button').click(function () {
+//
+//            var fate = Math.floor(Math.random() * 2 + 1);
+//            console.log(fate);
+//            if (fate <= 1) {
+//                death();
+//            }
+//            else {
+//                freedom();
+//            }
+//
+//
+//            function death() {
+//                var audio = new Audio('audio/creepy-laugh.mp3');
+//                audio.play();
+//                $('#ghost').fadeIn(3000);
+//
+//            }
+//
+//            function freedom() {
+//
+//            }
+//
+//        });
+
+        // assuming 1 = death
+        $('#left-button, #right-button').click(function () {
+            var fate = Math.floor(Math.random() * 2 + 1);
+            if (this.id == 'left-button' && fate <= 1) {
+                var audio = new Audio('audio/creepy-laugh.mp3');
+                audio.play();
+                $('#ghostLeft').fadeIn(3000);
             }
-            else {
-                freedom();
-            }
-            function death() {
-                alert("You died");
-            }
-            function freedom() {
-                alert("FREEEDOOOOOOOM!!!!!");
+            else if(this.id == 'left-button'){
+                alert("whew!");
             }
 
+            else if (this.id == 'right-button' && fate <= 1) {
+                var audio = new Audio('audio/creepy-laugh.mp3');
+                audio.play();
+                $('#ghostRight').fadeIn(3000);
+            }
+            else if(this.id == 'right-button'){
+                alert("whew!");
+            }
         });
-
 
     });
 

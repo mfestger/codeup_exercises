@@ -6,13 +6,8 @@ body {
     text-align: center;
 }
 
-#intro-text-container {
-    margin-top: 20%;
-
-  
-}
-
 .intro-text {
+    margin-top: 300px;
     color: white;
     font-family: 'Special Elite', cursive;
     font-size: 24px;
@@ -29,31 +24,51 @@ body {
 
 #choose-wisely-instruction {
     color: brown;
-    font-family: 'Ceviche One', cursive;
-    
+    font-family: 'Creepster', cursive;
     font-size: 60px;
 
 }
 
 #fork-image{
     top: 10%;
-    left:17%;
-    position: absolute;
+    z-index: 1;
     overflow: visible;
-    border-radius: 12%;
+    height: 600px;
+    width: 1257px;
+    position: inherit;
 }
 
-#left {
-    height: 15%;
-    width: 15%;
+#left-button{
+    height: 250px;
+    width: 300px;
     float: left;
-    overflow: visible;
+    position: absolute;
+    top: 230px;
+    left: 210px;
+    z-index: 3;
 }
 
-#right {
-
-    height: 15%;
-    width: 15%;
+#right-button{
+    height: 250px;
+    width: 340px;
     float: right;
-    overflow: visible;
+    position: absolute;
+    top: 230px;
+    right: 210px;
+    z-index: 3;
+}
+
+
+#ghostLeft{
+    position: absolute;
+    opacity: 0.7;
+    top: 40%;
+    left: 30%;
+}
+
+#ghostRight{
+    position: absolute;
+    opacity: 0.7;
+    top: 43%;
+    right: 34%;
 }
