@@ -10,7 +10,7 @@ body{
     font-family: 'Raleway', sans-serif;
 }
 #cityName{
-    margin-top: 50px;
+    margin-top: 30px;
     margin-left: 30px;
     color:white;
     /*text-align: center;*/
@@ -54,7 +54,6 @@ body{
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
 }
-
 #map{
     margin-left: 3%;
     margin-top: 2%;
