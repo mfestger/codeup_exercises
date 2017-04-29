@@ -37,12 +37,6 @@
     </div>
 </div>
 
-
-
-
-
-
-
 <script>
     src="https://code.jquery.com/jquery-2.2.4.min.js"
     integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
@@ -62,10 +56,6 @@
         $('#ghostLeft').hide();
         $('#ghostRight').hide();
         $('.final-button').hide();
-
-
-
-
 
         //if the user chooses NOT to skip the intro
         $('#show-intro-no').click(function () {
@@ -113,35 +103,10 @@
             audio.play();
         });
 
-//        $('.final-button').click(function () {
-//
-//            var fate = Math.floor(Math.random() * 2 + 1);
-//            console.log(fate);
-//            if (fate <= 1) {
-//                death();
-//            }
-//            else {
-//                freedom();
-//            }
-//
-//
-//            function death() {
-//                var audio = new Audio('audio/creepy-laugh.mp3');
-//                audio.play();
-//                $('#ghost').fadeIn(3000);
-//
-//            }
-//
-//            function freedom() {
-//
-//            }
-//
-//        });
-
-        // assuming 1 = death
         $('#left-button, #right-button').click(function () {
             var fate = Math.floor(Math.random() * 2 + 1);
             if (this.id == 'left-button' && fate <= 1) {
+
                 var audio = new Audio('audio/creepy-laugh.mp3');
                 audio.play();
                 $('#ghostLeft').fadeIn(3000);
@@ -151,6 +116,7 @@
             }
 
             else if (this.id == 'right-button' && fate <= 1) {
+
                 var audio = new Audio('audio/creepy-laugh.mp3');
                 audio.play();
                 $('#ghostRight').fadeIn(3000);
