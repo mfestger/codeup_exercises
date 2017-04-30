@@ -33,7 +33,7 @@
     },
     {
         "title": "Wrench",
-        "quantity": 10,
+        "quantity": 1,
         "categories": [
             "tool"
         ],
@@ -82,5 +82,13 @@
             "tool"
         ],
         "price": "$5"
+    },
+    {
+        "title": "Nails x50",
+        "quantity": 40,
+        "categories": [
+            "tool"
+        ],
+        "price": "$4"
     }
 ]

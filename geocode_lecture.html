@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        #map-canvas {
+            width: 770px;
+            height: 481px;
+        }
+    </style>
+</head>
+<body>
+<!-- div to hold map -->
+<div id="map-canvas"></div>
+
+<!-- creating inputs for dynamic coordinates -->
+<label for="address">Address:</label>
+<input id="address" value="6127 Amble Trail, San Antonio, TX, 78249" type="text">
+
+<label for="lat">Lat:</label>
+<input type="text" id="lat" value="29.426791">
+
+<label for="lng">Long:</label>
+<input type="text" id="lng" value="-98.489602">
+
+<!-- creating zoom functionality -->
+<label for="zoom">Zoom:</label>
+<input type="hidden" id="zoom" value="10">
+
+<button id="in">+</button>
+<button id="out">-</button>
+
+<!-- adding a button that submits the dynamic data -->
+<p><button id="update">Update Map</button></p>
+
+<!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMViuXc00nxP7xbLLm2mKXcTwZEx7aCn4"></script>
+
+<!-- Script to show address on map -->
+<script type="text/javascript">
+    (function () {
+        "use strict";
+
+        var mapOptions = {
+            zoom: 19,
+            disableDefaultUI: true
+        };
+
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+        var geocoder = new google.maps.Geocoder();
+    })();
+
+
+    function geoCodeAddress(geocoder, resultsMap) {
+        var address = document.getElementById('address').value;
+        geocoder.geocode({'address': address}, function (results, status) {
+            if (status === 'OK') {
+                resultsMap.setCenter(results[0].geometry.location);
+                var marker = new google.maps.Marker({
+                    map: resultsMap,
+                    position: results[0].geometry.location
+                })
+            }
+        })
+    }
+
+
+</script>
+</body>
